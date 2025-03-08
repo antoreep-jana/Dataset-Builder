@@ -24,10 +24,12 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  List<String> datasets = []; //['Dataset1', "Dataset2", "Dataset3"];
-  // List<Map<String, String>> datasets = [
-  //   {"name" : "Dataset1", "description" : ""}
-  // ];
+  //List<String> datasets = []; //['Dataset1', "Dataset2", "Dataset3"];
+   List<Map<String, String>> datasets = [
+     {"name" : "Dataset1", "description" : "Description of dataset 1"},
+     {"name" : "Dataset2", "description" : "Description of dataset 2"},
+     {"name" : "Dataset3", "description" : "Description of dataset 3"}
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -43,12 +45,12 @@ class _HomeScreenState extends State<HomeScreen> {
                 itemCount: datasets.length,
                 itemBuilder: (context, index) {
                   return ListTile(
-                    title: Text(datasets[index]),
+                    title: Text(datasets[index]['name']!),
                     onTap: () {
                       // Navigate to Dataset Details Page
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
-                          content: Text("${datasets[index]} tapped"),
+                          content: Text("${datasets[index]['name']!} tapped"),
                           duration: const Duration(seconds: 1),
                         ),
                       );

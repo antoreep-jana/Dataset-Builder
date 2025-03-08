@@ -28,6 +28,8 @@ android {
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
+
+       // archivesBaseName = "Dataset Builder-v-${versionName}(${versionCode})"
     }
 
     buildTypes {
