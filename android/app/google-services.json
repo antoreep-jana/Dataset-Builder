@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "79479997364",
+    "project_id": "kaggle-dataset-uploader",
+    "storage_bucket": "kaggle-dataset-uploader.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:79479997364:android:63268dfe33e37b9f6ba8e1",
+        "android_client_info": {
+          "package_name": "com.example.dataset_builder"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwY4oxdPIl3T5r5hGE9RI6zGvvBvxYgbY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
