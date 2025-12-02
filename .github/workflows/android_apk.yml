@@ -12,21 +12,15 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
-      - name: Set up JDK
-        uses: actions/setup-java@v3
+      - name: Install Flutter
+        uses: subosito/flutter-action@v2
         with:
-          distribution: "temurin"
-          java-version: "17"
+          flutter-version: '3.35.6'
+      - name: Flutter pub get
+        run: flutter pub get
 
-      - name: Setup Gradle cache
-        uses: gradle/gradle-build-action@v3
-
-      - name: Make the gradlew executable
-        run: chmod +x ./gradlew
-
-      - name: Build release APK
-        run: ./gradlew assembleRelease
+      - name: Build apk
+        run: flutter build apk --release
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
